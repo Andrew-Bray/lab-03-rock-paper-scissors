@@ -19,30 +19,50 @@
         </div>
     </header>
     <main>
-        <section class="main-section">
-            <img class="main-logo" src="assets/alchemy-logo.png"/>
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
+       <section>
+            <h1>Rock Paper Scissors... against a Computer!!</h1>
+            <h2>Some rules first</h2>
+            <p> Naturally, Paper beats rock, rock beats scissors, and scissors beats paper. That's about all there is to it.</p>
+        <div>
+            <label>
+                <input type="radio" name="hands" value="rock"/> Rock!
+            </label>
+            <label>
+                <input type="radio" name="hands" value="paper"/> Paper!!!
+            </label>
+            <label>
+                <input type="radio" name="hands" value="scissors"/> Scissors!!!!!!
+            </label>
+        </div>
+    </br>
+        <div class="game-tracker">
+            <div id=assess-game>
 
-            <content>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
-            </p>
+            </div>
+        </div>
+    </br>
+        <div class="stats-tracker">
+            <button id="play-button">Play!</button>
+            <div>Wins: <span id="win-display"></span> 
+                </div>
+            <div>Losses: <span id="loss-display"></span>
+                </div>
+            <div>Draws: <span id="draw-display"></span>
+                 </div>
+        </div>
 
-        </section>
+
+            
+        <!-- 1. Page layout (title, header, footer?, etc.)
+        1. Explain the rules (paper beats rock, rock beats scissors, scissors beats papers), an HTML List might be a good semantic choice.
+        1. Radio buttons _with same name for grouping_ for choosing rock, paper, or scissors (images anyone?)
+        1. Button for "Play" 
+        1. Display of wins and losses and draws
+        1. Display of result of each game (can be text and/or images), should indicate what the computer threw and what the result was (win, loss, draw) -->
+
+
+
+       </section>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
