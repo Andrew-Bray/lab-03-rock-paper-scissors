@@ -17,8 +17,7 @@ let draws = 0;
 playButton.addEventListener('click', () => {
     const computerChoice = getRandomThrow();
 // get the user's choice, based on which one they checked
-    const checkedRadioButton = document.querySelector(':checked');
-    const userChoice = checkedRadioButton.value;
+    const userChoice = document.querySelector(':checked').value;
 // deliver the outcome of the game
     const outcome = didUserWin(userChoice, computerChoice);
 
