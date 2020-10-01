@@ -38,24 +38,6 @@ playButton.addEventListener('click', () => {
 );
 
 
-// ### TDD `didUserWin` Function
-
-// Given a user choice, and a random throw for the computer, we will need to know the game result (from the user's perspective): "win", "lose", or "draw"
-
-// TDD a `didUserWin` function that:
-
-// 1. Has two parameters: `player` and `computer`
-// 1. Returns one of the following values:
-//     - `draw` - the throws are identical
-//     - `win` - the player's throw beats the computer throw
-//     - `lose` - the computer's throw beats the player's throw
-
-// Write one test at a time, each test can address one of the nine possible outcomes.
-
-// You can assume _valid input_, meaning the passed input will always be a valid throw of `rock`, `paper`, or `scissors`.
-
-// #### Sections
-
 // 1. Imports:
 //     - Your `getRandomThrow` and `doesUserWin` functions
 // 1. Reference needed DOM elements:
