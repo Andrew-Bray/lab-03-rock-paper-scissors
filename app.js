@@ -5,6 +5,7 @@ const playButton = document.getElementById('play-button');
 const winDisplay = document.getElementById('win-display');
 const lossDisplay = document.getElementById('loss-display');
 const drawDisplay = document.getElementById('draw-display');
+const resetDisplay = document.getElementById('reset-display');
 const assessGame = document.getElementById('assess-game');
 const resetButton = document.getElementById('reset-button');
 
@@ -26,24 +27,30 @@ playButton.addEventListener('click', () => {
     if (outcome === 'draw') {
         draws++;
         drawDisplay.textContent = draws;
-        assessGame.textContent = `Bully, it seems we have come to a head. we both chose ${userChoice}`;
+        assessGame.textContent = `Bully, it seems we have come to a head. we both chose ${userChoice}.`;
     } else if (outcome === 'lose') {
         losses++;
         lossDisplay.textContent = losses;
-        assessGame.innerHTML = `Tough luck <em>sport</em> I chose ${computerChoice} and hou sadly chose ${userChoice}`;
+        assessGame.innerHTML = `Tough luck <em>sport!</em>  I chose ${computerChoice} and you sadly chose ${userChoice}.`;
     } else if (outcome === 'win') {
         wins++;
-        winDisplay.textContent = wins;
-        assessGame.textContent = `Aha! It seems with your ${userChoice} you bested my ${computerChoice}`;
+        winDisplay.textContent = ` ${wins}`;
+        assessGame.textContent = `Aha! It seems with your ${userChoice} you bested my ${computerChoice}.`;
     }
 
-}
-);
+});
+let resets = 0;
 resetButton.addEventListener('click', () => {
-    document.location.reload();
-     wins = 0;
-     losses = 0;
-     draws = 0;
+    wins = 0;
+    losses = 0;
+    draws = 0;
+    resets++;
+    winDisplay.textContent = 0;
+    lossDisplay.textContent = 0;
+    drawDisplay.textContent = 0;
+    assessGame.textContent = '';
+    resetDisplay.textContent = resets;
+
 });
 
 

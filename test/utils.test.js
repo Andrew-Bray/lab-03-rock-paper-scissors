@@ -1,7 +1,16 @@
 // IMPORT MODULES under test here:
-import { didUserWin } from '../utils.js';
+import { didUserWin, getRandomThrow } from '../utils.js';
 
 const test = QUnit.test;
+
+test('test should randomly deliver rock, paper, or scissors', (expect) => {
+
+    const actual = getRandomThrow();
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(typeof actual, 'string');
+});
 
 test('paper beats rock should give a win', (expect) => {
     //Arrange
