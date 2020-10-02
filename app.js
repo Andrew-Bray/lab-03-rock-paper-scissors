@@ -6,6 +6,7 @@ const winDisplay = document.getElementById('win-display');
 const lossDisplay = document.getElementById('loss-display');
 const drawDisplay = document.getElementById('draw-display');
 const assessGame = document.getElementById('assess-game');
+const resetButton = document.getElementById('reset-button');
 
 // initialize state
 let wins = 0;
@@ -17,8 +18,7 @@ let draws = 0;
 playButton.addEventListener('click', () => {
     const computerChoice = getRandomThrow();
 // get the user's choice, based on which one they checked
-    const checkedRadioButton = document.querySelector(':checked');
-    const userChoice = checkedRadioButton.value;
+    const userChoice = document.querySelector(':checked').value;
 // deliver the outcome of the game
     const outcome = didUserWin(userChoice, computerChoice);
 
@@ -26,16 +26,25 @@ playButton.addEventListener('click', () => {
     if (outcome === 'draw') {
         draws++;
         drawDisplay.textContent = draws;
+        assessGame.textContent = `Bully, it seems we have come to a head. we both chose ${userChoice}`;
     } else if (outcome === 'lose') {
         losses++;
         lossDisplay.textContent = losses;
+        assessGame.innerHTML = `Tough luck <em>sport</em> I chose ${computerChoice} and hou sadly chose ${userChoice}`;
     } else if (outcome === 'win') {
         wins++;
         winDisplay.textContent = wins;
+        assessGame.textContent = `Aha! It seems with your ${userChoice} you bested my ${computerChoice}`;
     }
 
 }
 );
+resetButton.addEventListener('click', () => {
+    document.location.reload();
+     wins = 0;
+     losses = 0;
+     draws = 0;
+});
 
 
 // 1. Imports:
